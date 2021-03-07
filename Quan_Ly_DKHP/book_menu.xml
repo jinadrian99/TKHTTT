@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+	<!--Book Menu-->
+		<menuitem id="book_parent" name="Quản lý học phần" icon="STOCK_OPEN"/>
+		
+		<menuitem id="menu_book_parent" name="Tính năng Học Phần" parent="book_parent"/>
+		<menuitem action="action_book" name="Thông tin chi tiết" id="menu_book_book" parent="menu_book_parent" string="Result"/>
+		<menuitem action="action_book_tree" name="Danh sách học phần" id="menu_book_tree" parent="menu_book_parent" string="List of books"/>
+		
+		
+		<menuitem id="menu_book_parent_2" name="Tính năng lớp học Phần" parent="book_parent"/>
+		<menuitem action="action_book_2" name="Thông tin chi tiết" id="menu_book_book_2" parent="menu_book_parent_2" string="Result"/>
+		<menuitem action="action_book_tree_2" name="Danh sách học phần" id="menu_book_tree_2" parent="menu_book_parent_2" string="List of books"/>
+	</data>
+</openerp>
