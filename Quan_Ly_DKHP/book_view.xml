@@ -36,6 +36,11 @@
 				<form string="Book">
 					<field name="hocphan" string="Học phần:"/>
 					<field name="sotinchi" string="Số tín chỉ:"/>
+					<notebook colspan="4">
+						<page string="Học phần tuyên quyết">
+							<field name="tbl_hptq"/>
+						</page>
+					</notebook>
 				</form>
 			</field>
 		</record>
@@ -46,6 +51,7 @@
             <field name="res_model">hp.hp</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
+			
         </record>
 		
 		 <record model="ir.actions.act_window" id="action_book_tree">
