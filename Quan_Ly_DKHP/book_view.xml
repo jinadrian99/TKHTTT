@@ -42,33 +42,18 @@
 						</page>
 					</notebook>
 				</form>
-			</field>
+			</field>	
 		</record>
 		
 	<!--Book Action-->
-		 <record model="ir.actions.act_window" id="action_book">
-            <field name="name">Chi tiết học phần</field>
-            <field name="res_model">hp.hp</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-			
-        </record>
-		
-		 <record model="ir.actions.act_window" id="action_book_tree">
-            <field name="name">Thông tin các học phần</field>
-            <field name="res_model">hp.hp</field>
-            <field name="view_type">tree</field>
-            <field name="view_mode">tree</field>
-        </record>
-		
-		<record model="ir.actions.act_window" id="action_book_2">
+		<record model="ir.actions.act_window" id="action_book">
             <field name="name">Chi tiết học phần</field>
             <field name="res_model">hp.hp</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
 		
-		 <record model="ir.actions.act_window" id="action_book_tree_2">
+		<record model="ir.actions.act_window" id="action_book_tree">
             <field name="name">Thông tin các học phần</field>
             <field name="res_model">hp.hp</field>
             <field name="view_type">tree</field>

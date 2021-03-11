@@ -2,12 +2,12 @@
 <openerp>
 	<data noupdate="1">
 		<!--Books-->
-		<record id="book_01" model="book.book">
+		<record id="book_01" model="hp.hp">
 			<field name="hocphan">NMLT</field>
 			<field name="sotinchi">3</field>
 			<field name="hptienquyet">0</field>
 		</record>
-		<record id="book_02" model="book.book">
+		<record id="book_02" model="hp.hp">
 			<field name="hocphan">CTDL</field>
 			<field name="sotinchi">4</field>
 			<field name="hptienquyet">0</field>

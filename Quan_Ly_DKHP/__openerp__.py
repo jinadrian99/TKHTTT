@@ -8,8 +8,9 @@
     "category":"General",
     "depends":["base"],#khai bao nhung module lien quan
     "init_xml":[],
-    "demo_xml":[],
-    "update_xml":["book_view.xml","book_menu.xml"],
+    "demo_xml":["book_demo.xml"],
+    "update_xml":["book_view_2.xml","book_view.xml","book_menu.xml"],
     "active":False,
     "installable":True,
+    'css': ['static/src/css/qlhp.css'],
 }

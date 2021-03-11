@@ -8,7 +8,17 @@ class book (osv.osv):
         'sotinchi':fields.integer('Số tín chỉ'),
         'hptienquyet':fields.integer('Học phần tiên quyết'),
         'tbl_hptq': fields.many2many('hp.hp', 'hp_hp', 'id', 'create_uid', ''),
-        # 'project_ids': fields.many2many('project.project', 'project_task_type_rel', 'type_id', 'project_id', 'Projects'),
     }
-    
 book()
+
+class lop (osv.osv):
+    _name='lhp.lhp'
+    _columns = {
+        'malhp':fields.char('Mã Học phần', size=50, required=True, translate=True),
+        'tenhp':fields.selection([('a', "Lập trình nâng cao"), ('b','KTLT')], 'Tên học phần', select=True, default='a'),
+        'giangvien':fields.selection([('0', "Trần Quốc Hùng"), ('1','KaiWen'), ('2','Xue'), ('3','Fu')], 'Giảng viên', select=True),
+        'ngaybatdau':fields.date('Ngày bắt đầu', size=50),
+        'ngayketthuc':fields.date('Ngày kết thúc', size=50),
+        'ghichu':fields.text('', size=200, required=True, translate=False),
+    }
+lop()
