@@ -1,0 +1,66 @@
+﻿-- A.1/ Tổng doanh số của tất cả các loại hàng hóa
+select [HANG HOA].[Loaihh] on columns,
+[Measures].[Thanhtien] on rows
+from [KDHH DW]
+
+-- A.2/ Doanh số của từng loại hàng hóa 
+select [HANG HOA].[Loaihh].members on columns,
+[Measures].[Thanhtien] on rows
+from [KDHH DW]
+
+-- A.3/ Doanh số của loại hàng hóa là bánh kẹo
+select [HANG HOA].[Loaihh].&[BANHK] on columns,
+[Measures].[Thanhtien] on rows
+from [KDHH DW]
+
+-- A.4/ Doanh số của khu vực miền Trung
+select [CUA HANG].[Tenmien].&[Miền Trung] on columns,
+[Measures].[Thanhtien] on rows
+from [KDHH DW]
+
+-- A.5/ Doanh số của các loại hàng hóa: bánh kẹo và nước giải khát
+select {[HANG HOA].[Loaihh].&[BANHK],[HANG HOA].[Loaihh].&[NGK]} on columns,
+[Measures].[Thanhtien] on rows
+from [KDHH DW]
+
+-- A.6/ Số lần bán hàng và doanh số của các khu vực: miền Bắc và miền Nam
+select {[CUA HANG].[Tenmien].&[Miền Bắc], [CUA HANG].[Tenmien].&[Miền Nam]} on columns,
+{[Measures].[Soluong], [Measures].[Thanhtien]} on rows
+from [KDHH DW]
+
+-- A.7/ Số lần bán hàng và doanh số của tất cả các loại hàng hóa
+select non EMPTY [HANG HOA].[Loaihh].Members on columns,
+{[Measures].[HOA DON Count], [Measures].[Thanhtien]} on rows
+from [KDHH DW]
+
+-- A.8/ Tất cả measures của các hàng hóa thuộc 2 loại: bánh kẹo và dầu ăn
+select {[HANG HOA].[Loaihh].&[BANHK], [HANG HOA].[Loaihh].&[DAUAN]} on columns,
+[Measures].MEMBERS on rows
+from [KDHH DW]
+
+-- A.9/ Tất cả measures của tất cả các loại hàng hóa
+select non empty [HANG HOA].[Loaihh].MEMBERS on columns,
+[Measures].MEMBERS on rows
+from [KDHH DW]
+
+-- A.10/ Xoay chiều (PIVOT) của ví dụ trên 
+select non empty [HANG HOA].[Loaihh].MEMBERS on rows,
+[Measures].MEMBERS on columns
+from [KDHH DW]
+
+-- B.1/ Doanh số của các cửa hàng theo khu vực của Việt Nam
+select DESCENDANTS([CUA HANG].[Hierarchy].[Tenqgia].&[Việt Nam],[CUA HANG].[Hierarchy].[Tenmien],SELF) on rows,
+[Measures].[Thanhtien] on columns
+from [KDHH DW]
+
+-- B.2/ Doanh số của các khách hàng theo khu vực của Việt Nam
+select DESCENDANTS([KHACH HANG].[Hierarchy].[Tenqgia].&[Việt Nam],[KHACH HANG].[Hierarchy].[Tenmien],SELF) on rows,
+[Measures].[Thanhtien] on columns
+from [KDHH DW]
+
+-- B.3/ Doanh số của mỗi quý trong năm 2014
+select DESCENDANTS([Ngayhd].[Hierarchy].[Nam].&[2.014E3], [Ngayhd].[Hierarchy].[Quy],SELF) on rows,
+[Measures].[Thanhtien] on columns
+from [KDHH DW]
+
+-- B.4/ Doanh số và số lần bán hàng của từng hàng hóa thuộc loại dầu ăn

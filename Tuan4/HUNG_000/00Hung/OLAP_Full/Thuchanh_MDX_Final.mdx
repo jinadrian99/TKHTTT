@@ -1,0 +1,213 @@
+﻿--VD1A: doanh số của tất cả chủng loại hàng hóa là bánh kẹo
+SELECT [Measures].[Thanhtien] ON COLUMNS,
+	[Dim Hang Hoa].[Cloai].&[Bánh kẹo] ON ROWS
+FROM [BANHANG_CUBE];
+--VD1B: (SV) tổng số lượng bán tất cả các hàng hóa của khu vực miền nam
+SELECT [Measures].[Sluong] ON COLUMNS,
+	[Dim Cua Hang].[Mien].&[Miền Nam] ON ROWS
+FROM [BANHANG_CUBE];
+-----------------------------------------------------------------------------
+--VD2A: doanh số của các chủng loại hàng hóa 
+--thuộc tập hợp {bánh kẹo, nước giải khát,...}
+SELECT [Measures].[Thanhtien] ON ROWS,
+	{[Dim Hang Hoa].[Cloai].&[Bánh kẹo],[Dim Hang Hoa].[Cloai].&[Nước giải khát]} ON COLUMNS
+FROM [BANHANG_CUBE];
+--VD2B: (SV) số lần giao dịch và số lượng bán hàng của các khu vực 
+--thuộc tập hợp {miền bắc, miền nam,...}
+SELECT {[Measures].[Fact Ban Hang Count],[Measures].[Sluong]} ON ROWS,
+	{[Dim Cua Hang].[Mien].&[Miền Bắc],[Dim Cua Hang].[Mien].&[Miền Nam]} ON COLUMNS
+FROM [BANHANG_CUBE];
+--------------------------------------------------------------------------
+--VD3A: Doanh số của tất cả chủng loại hàng hóa 
+-- có bảng Fact
+SELECT [Measures].[Thanhtien] ON ROWS,
+		[Dim Hang Hoa].[Cloai].MEMBERS ON COLUMNS
+FROM [BANHANG_CUBE];
+--VD3B: (SV) Doanh số và tổng số lượng bán hàng 
+--của tất cả chủng loại hàng hóa có bảng Fact
+SELECT {[Measures].[Thanhtien],[Measures].[Sluong]} ON ROWS,
+		[Dim Hang Hoa].[Cloai].MEMBERS ON COLUMNS
+FROM [BANHANG_CUBE];
+--VD3C: (SV) Tất cả measures của các hàng hóa 
+--thuộc 2 chủng loại Bánh kẹo, Dầu ăn
+SELECT [Measures].MEMBERS ON COLUMNS,
+  {[Dim Hang Hoa].[Cloai].&[Bánh kẹo],[Dim Hang Hoa].[Cloai].&[Dầu ăn]} ON ROWS
+FROM [BANHANG_CUBE];
+--VD3D: (SV) Tất cả các measures của 
+--tất cả chủng loại hàng hóa
+SELECT [Measures].MEMBERS ON COLUMNS,
+	[Dim Hang Hoa].[Cloai].MEMBERS ON ROWS
+FROM [BANHANG_CUBE];
+----------------------------------------------------------------------------
+--VD4: làm lại VD3 mà đổi chiều dòng & cột (PIVOT)
+SELECT [Measures].[Thanhtien] ON COLUMNS,
+		[Dim Hang Hoa].[Cloai].MEMBERS ON ROWS
+FROM [BANHANG_CUBE];
+-----------------------------------------------------------------------------
+--VD5A:Cho biết doanh số của từng hàng hóa
+--thuộc chủng loại bánh kẹo
+SELECT [Measures].[Thanhtien] ON COLUMNS,
+[Dim Hang Hoa].[Hierarchy].[Cloai].&[Bánh kẹo].CHILDREN ON ROWS
+FROM [BANHANG_CUBE];
+--VD5B:(SV)Cho biết doanh số, và tổng số lượng bán của 
+--từng hàng hóa thuộc chủng loại dầu ăn
+SELECT {[Measures].[Thanhtien],[Measures].[Sluong]} ON COLUMNS,
+	[Dim Hang Hoa].[Hierarchy].[Cloai].[Dầu ăn].CHILDREN ON ROWS
+FROM [BANHANG_CUBE];
+--VD5C:(SV)Cho biết số lượng của từng hàng hóa
+--thuộc chủng loại dầu ăn và bánh kẹo
+SELECT [Measures].[Sluong] ON COLUMNS,
+	{[Dim Hang Hoa].[Hierarchy].[Cloai].&[Bánh kẹo].CHILDREN,
+	[Dim Hang Hoa].[Hierarchy].[Cloai].&[Dầu ăn].CHILDREN
+	} ON ROWS
+FROM [BANHANG_CUBE];
+-----------------------------------------------------------------------------
+--VD6A: Cho biết doanh số bán hàng của từng miền ở việt nam
+--(ROLLUP & DRILL DOWN)
+--Cách 1: Dùng DESCENDANTS
+SELECT  DESCENDANTS ([Dim Cua Hang].[Hierarchy].[Qgia].&[Việt Nam],[Dim Cua Hang].[Hierarchy].[Mien],SELF)
+		ON ROWS,
+	    [Measures].[Thanhtien] ON COLUMNS
+FROM [BANHANG_CUBE];
+--Cách 2: (SV) Dùng CHILDREN 
+SELECT [Dim Cua Hang].[Hierarchy].[Qgia].&[Việt Nam].CHILDREN
+		ON ROWS,
+	    [Measures].[Thanhtien] ON COLUMNS
+FROM [BANHANG_CUBE];
+--VD6B: Cho biết doanh số bán hàng của 
+--từng miền và từng thành phố thuộc việt nam
+--C1: SELF AND BEFORE
+SELECT  DESCENDANTS ([Dim Cua Hang].[Hierarchy].[Qgia].[Việt Nam],[Dim Cua Hang].[Hierarchy].[Tpho],SELF_AND_BEFORE)
+		ON ROWS,
+	    [Measures].[Thanhtien] ON COLUMNS
+FROM [BANHANG_CUBE];
+--C2: (SV) BEFORE
+SELECT  DESCENDANTS ([Dim Cua Hang].[Hierarchy].[Qgia].&[Việt Nam],[Dim Cua Hang].[Hierarchy].[Tench],BEFORE)
+		ON ROWS,
+	    [Measures].[Thanhtien] ON COLUMNS
+FROM [BANHANG_CUBE];
+--VD6C: (SV) Cho biết doanh số của 
+--từng thành phố, và từng cửa hàng thuộc việt nam
+--C1:SELF_AND_AFTER
+SELECT DESCENDANTS([Dim Cua Hang].[Hierarchy].[Qgia].&[Việt Nam],[Dim Cua Hang].[Hierarchy].[Tpho],SELF_AND_AFTER)
+		ON ROWS,
+	    [Measures].[Thanhtien] ON COLUMNS
+FROM [BANHANG_CUBE];
+--C2:AFTER
+SELECT DESCENDANTS([Dim Cua Hang].[Hierarchy].[Qgia].&[Việt Nam],[Dim Cua Hang].[Hierarchy].[Mien],AFTER)
+		ON ROWS,
+	    [Measures].[Thanhtien] ON COLUMNS
+FROM [BANHANG_CUBE];
+--BEFORE_AND_AFTER
+SELECT {[Dim Cua Hang].[Hierarchy].[Qgia],
+		DESCENDANTS ([Dim Cua Hang].[Hierarchy].[Qgia],
+		[Dim Cua Hang].[Hierarchy].[Tpho],BEFORE_AND_AFTER)}
+		ON ROWS,
+	    [Measures].[Thanhtien] ON COLUMNS
+FROM [BANHANG_CUBE];
+-----------------------------------------------------------------------------
+--VD7A: Cho biết doanh số của từng chủng loại 
+--theo từng miền
+SELECT [Dim Hang Hoa].[Cloai].MEMBERS ON COLUMNS,
+		[Dim Cua Hang].[Mien].MEMBERS ON ROWS
+FROM [BANHANG_CUBE]
+WHERE [Measures].[Thanhtien];
+--VD7B: (SV) Tổng số lượng bán của các chủng loại
+-- theo từng năm
+SELECT [Dim Hang Hoa].[Cloai].MEMBERS ON ROWS,
+	[Dim Thoi Gian].[Nam].MEMBERS ON COLUMNS
+FROM [BANHANG_CUBE]
+WHERE ([Measures].[Sluong]);
+--VD7C: (SV) Cho biết số lượng mua hàng của 
+--từng khách hàng tại từng cửa hàng ở Việt Nam
+SELECT [Dim Khach Hang].[Tenkh].MEMBERS ON ROWS,
+	DESCENDANTS([Dim Cua Hang].[Hierarchy].[Qgia].&[Việt Nam],
+	[Dim Cua Hang].[Hierarchy].[Tench],SELF_AND_AFTER) ON COLUMNS
+FROM [BANHANG_CUBE]
+WHERE [Measures].[Sluong];
+--VD7D: Giong nhu VD 7A nhung loai bo nhung NULL
+SELECT NON EMPTY[Dim Hang Hoa].[Cloai].MEMBERS ON COLUMNS,
+		NON EMPTY [Dim Cua Hang].[Mien].MEMBERS ON ROWS
+FROM [BANHANG_CUBE]
+WHERE ([Measures].[Thanhtien]);
+-----------------------------------------------------------------------------
+--VD8A: Cho biết số lượng bán hàng theo từng chủng loại
+--của từng cửa hàng ở thành phố Đà Nẵng
+--Nhiều điều kiện trên 1 Dim (SLICING)
+--C1
+SELECT[Dim Hang Hoa].[Cloai].MEMBERS ON ROWS,
+	[Dim Cua Hang].[Tench].MEMBERS ON COLUMNS
+FROM [BANHANG_CUBE]
+WHERE ([Measures].[Sluong],[Dim Cua Hang].[Tpho].[Tp.Đà Nẵng]);
+--C2
+SELECT[Dim Hang Hoa].[Cloai].MEMBERS ON ROWS,
+	[Dim Cua Hang].[Hierarchy].[Qgia].&[Việt Nam].&[Miền Trung].&[Tp.Đà Nẵng].CHILDREN ON COLUMNS
+FROM [BANHANG_CUBE]
+WHERE ([Measures].[Sluong]);
+--VD8B: Cho biết số lượng mua hàng của từng khách hàng
+--tại từng cửa hàng đối với chủng loại bánh kẹo
+SELECT NON EMPTY[Dim Khach Hang].[Tenkh].MEMBERS ON ROWS,
+	NON EMPTY[Dim Cua Hang].[Tench].MEMBERS ON COLUMNS
+FROM [BANHANG_CUBE]
+WHERE ([Measures].[Sluong],[Dim Hang Hoa].[Cloai].&[Bánh kẹo]);
+--VD8C: (SV) Cho biết doanh số của từng chủng loại
+--theo từng miền 
+--trong năm 2013
+SELECT NON EMPTY [Dim Hang Hoa].[Cloai].MEMBERS ON ROWS,
+	NON EMPTY [Dim Cua Hang].[Mien].MEMBERS ON COLUMNS
+FROM [BANHANG_CUBE]
+WHERE ([Measures].[Thanhtien],[Dim Thoi Gian].[Nam].[2013]);
+--VD8D: (SV) Cho biết doanh số của từng chủng loại
+--theo từng quốc gia 
+--trong quý 1 và quý 3 năm 2013
+SELECT [Dim Hang Hoa].[Cloai].MEMBERS ON ROWS,
+	[Dim Cua Hang].[Qgia].MEMBERS ON COLUMNS
+FROM [BANHANG_CUBE]
+WHERE ([Measures].[Thanhtien], 
+		{[Dim Thoi Gian].[Quy].[1],
+		[Dim Thoi Gian].[Quy].[3]},
+		[Dim Thoi Gian].[Nam].[2013]);
+-----------------------------------------------------------------------------
+--VD9A: Cho biết doanh số bán trung bình
+--của mỗi cửa hàng ở thành phố HCM
+--biết doanh số tb = (tổng doanh số / số lần giao dịch)
+--Calculated Measure
+WITH MEMBER [Measures].[Doanhso_tb]
+AS [Measures].[Thanhtien]/[Measures].[Fact Ban Hang Count]
+SELECT [Measures].[Doanhso_tb] ON COLUMNS,
+	[Dim Cua Hang].[Tench].MEMBERS ON ROWS
+FROM [BANHANG_CUBE]
+WHERE [Dim Cua Hang].[Tpho].&[Tp. Hồ Chí Minh];
+--VD9B: (SV)Cho biết doanh số bán trung bình
+--của mỗi chủng loại tại từng cửa hàng ở thành phố HCM
+--biết doanh số tb = (tổng doanh số / số lần giao dịch)
+WITH MEMBER [Measures].[Doanhso_tb]
+AS [Measures].[Thanhtien]/[Measures].[Fact Ban Hang Count]
+SELECT [Dim Cua Hang].[Tench].MEMBERS ON ROWS,
+	[Dim Hang Hoa].[Cloai].MEMBERS ON COLUMNS
+FROM [BANHANG_CUBE]
+WHERE ([Measures].[Doanhso_tb],[Dim Cua Hang].[Tpho].&[Tp. Hồ Chí Minh]);
+--VD9C: (SV)Cho biết lợi nhuận của từng cửa hàng ở VN
+--trong từng năm 
+--biết lợi nhuận bằng 50% doanh số thu được
+--C1
+WITH MEMBER [Measures].[Loinhuan]
+AS [Measures].[Thanhtien]*0.5
+SELECT [Dim Cua Hang].[Tench].MEMBERS ON ROWS,
+	[Dim Thoi Gian].[Nam].MEMBERS ON COLUMNS
+FROM [BANHANG_CUBE]
+WHERE ([Measures].[Loinhuan],[Dim Cua Hang].[Qgia].&[Việt Nam]);
+--C2
+WITH MEMBER [Measures].[Loinhuan]
+AS [Measures].[Thanhtien]*0.5
+SELECT DESCENDANTS([Dim Cua Hang].[Hierarchy].[Qgia].&[Việt Nam],
+	[Dim Cua Hang].[Hierarchy].[Tench],SELF_AND_AFTER) ON ROWS,
+	[Dim Thoi Gian].[Nam].MEMBERS ON COLUMNS
+FROM [BANHANG_CUBE]
+WHERE ([Measures].[Loinhuan]);
+
+
+
+
+
+

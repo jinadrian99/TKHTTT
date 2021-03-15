@@ -1,0 +1,70 @@
+select [Measures].[Thanhtien] on rows,
+[CUA HANG].[Hierarchy].[Tenqgia].&[Việt Nam].CHILDREN on columns
+from [KDHH DW]
+
+select [Measures].[Thanhtien] on rows,
+[KHACH HANG].[Hierarchy].[Tenqgia].&[Việt Nam].CHILDREN on columns
+from [KDHH DW]
+
+select [Measures].[Thanhtien] on rows,
+DESCENDANTS([Ngayhd].[Hierarchy].[Nam].&[2.014E3],[Ngayhd].[Hierarchy].[Quy],self) on columns
+from [KDHH DW]
+
+select {[Measures].[Thanhtien],[Measures].[HOA DON Count]} on rows,
+[HANG HOA].[Hierarchy].[Loaihh].&[DAUAN].CHILDREN on columns
+from [KDHH DW]
+
+select [Measures].[Thanhtien] ON ROWS,
+{[HANG HOA].[Hierarchy].[Loaihh].&[DAUAN].CHILDREN, [HANG HOA].[Hierarchy].[Loaihh].&[BANHK].CHILDREN} ON COLUMNS
+from [KDHH DW]
+
+select [Measures].[Thanhtien] ON ROWS,
+DESCENDANTS([CUA HANG].[Hierarchy].[Tenqgia].&[Việt Nam],[CUA HANG].[Hierarchy].[Tenmien],SELF_AND_AFTER) ON COLUMNS
+from [KDHH DW]
+
+select [Measures].[Thanhtien] ON ROWS,
+DESCENDANTS([CUA HANG].[Hierarchy].[Tenqgia].&[Việt Nam],[CUA HANG].[Hierarchy].[tENTPHO],SELF) ON COLUMNS
+from [KDHH DW]
+
+SELECT NON EMPTY [HANG HOA].[Loaihh].MEMBERS ON ROWS,
+ NON EMPTY [CUA HANG].[Tenmien].MEMBERS ON COLUMNS
+from [KDHH DW]
+wHERE ([Measures].[Thanhtien])
+
+SELECT NON EMPTY [HANG HOA].[Loaihh].MEMBERS ON ROWS,
+ NON EMPTY [Ngayhd].[Hierarchy].[Nam].MEMBERS ON COLUMNS
+from [KDHH DW]
+wHERE ([Measures].[Thanhtien])
+
+--***************************************************************************************
+--                                  C. SLICING, DICING                                 --
+--***************************************************************************************
+-- C.1/ Doanh số theo từng khách hàng tại từng cửa hàng ở Việt Nam
+SELECT NON EMPTY [KHACH HANG].[Tenkh].MEMBERS ON ROWS,
+DESCENDANTS([CUA HANG].[Hierarchy].[Tenqgia].&[Việt Nam],[CUA HANG].[Hierarchy].[Tench],SELF) ON COLUMNS
+from [KDHH DW]
+wHERE ([Measures].[Thanhtien])
+
+-- C.2/ Doanh số từng loại hàng của từng cửa hàng ở TPHCM
+SELECT NON EMPTY [HANG HOA].[Loaihh].MEMBERS ON ROWS,
+[CUA HANG].[Hierarchy].[Tenqgia].&[Việt Nam].&[Miền Nam].&[TPHCM].CHILDREN ON COLUMNS
+from [KDHH DW]
+wHERE ([Measures].[Thanhtien])
+
+-- C.3/ Doanh số của từng khách hàng tại từng cửa hàng đối với loại hàng hóa bánh kẹo
+SELECT NON EMPTY [KHACH HANG].[Tenkh].MEMBERS ON ROWS,
+ NON EMPTY [CUA HANG].[Tench].MEMBERS ON COLUMNS
+from [KDHH DW]
+wHERE ([Measures].[Thanhtien], [HANG HOA].[Hierarchy].[Loaihh].&[BANHK])
+
+-- C.4/ Doanh số của từng loại hàng hóa theo từng miền trong năm 2014
+SELECT NON EMPTY [HANG HOA].[Tenhh].MEMBERS ON ROWS,
+ NON EMPTY [CUA HANG].[Tenmien].MEMBERS ON COLUMNS
+from [KDHH DW]
+wHERE ([Measures].[Thanhtien], [Ngayhd].[Hierarchy].[Nam].&[2.014E3])
+
+-- C.5/ Doanh số của từng loại hàng hóa theo từng quốc gia trong quý 1 năm 2014
+SELECT NON EMPTY [HANG HOA].[Loaihh].MEMBERS ON ROWS,
+ NON EMPTY [CUA HANG].[Tenqgia].MEMBERS ON COLUMNS
+from [KDHH DW]
+wHERE ([Measures].[Thanhtien], [Ngayhd].[Hierarchy].[Nam].&[2.014E3].&[1.])

@@ -1,0 +1,580 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f42f3b29-6c53-4d0e-87d1-1e2fb039e895" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>KDHH DW</ID>
+  <Name>KDHH DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="14" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7641" scrolltop="1670" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="20267" y="8467" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="KHACH_HANG" left="5420" top="1" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_KHACH_HANG" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="CUA_HANG" left="20" top="5761" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_CUA_HANG" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="HOA_DON" left="2720" top="10886" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_HOA_DON" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="KHU_VUC" left="20" top="212" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_KHU_VUC" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="HANG_HOA" left="2720" top="18286" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_HANG_HOA" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="THOI_GIAN" left="8120" top="11811" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_THOI_GIAN" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2720" top="1387" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__KHACH_HAN__khoak__38996AB5]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="15" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3020" y="1786" />
+              <point x="4220" y="1786" />
+              <point x="4220" y="1787" />
+              <point x="5420" y="1787" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4470" top="3074" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="2850" height="8112" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__HOA_DON__khoakh__4316F928]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="5" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6920" y="3573" />
+              <point x="6920" y="7229" />
+              <point x="4770" y="7229" />
+              <point x="4770" y="10886" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1121" top="2862" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__CUA_HANG__khoakv__3B75D760]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="2" sourceattachpoint="5" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="1520" y="3361" />
+              <point x="1520" y="5761" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1121" top="7987" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="2299" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__HOA_DON__khoach__4222D4EF]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="5" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="1520" y="8486" />
+              <point x="1520" y="9686" />
+              <point x="3120" y="9686" />
+              <point x="3120" y="10886" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="5420" top="12436" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__HOA_DON__ngaygh__44FF419A]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="3" sourceattachpoint="12" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8120" y="12835" />
+              <point x="6920" y="12835" />
+              <point x="6920" y="12836" />
+              <point x="5720" y="12836" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3821" top="15586" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__HOA_DON__khoahh__45F365D3]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="3" sourceattachpoint="4" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4220" y="18286" />
+              <point x="4220" y="15886" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="5420" top="13536" logicalid="13" controlid="13" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__HOA_DON__ngayhd__440B1D61]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="3" sourceattachpoint="16" destattachpoint="21" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8120" y="13935" />
+              <point x="6920" y="13935" />
+              <point x="6920" y="13936" />
+              <point x="5720" y="13936" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-7641</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>1670</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="9461a535-9994-4a4d-b8af-274e1d3c9a23">
+      <ID>KHACH HANG</ID>
+      <Name>KHACH HANG</Name>
+      <DimensionID>KHACH HANG</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7d6048d4-b887-4abb-8092-ba952148078b">
+          <AttributeID>Khoakh</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6c9c1f2d-5895-4e06-a7a5-0a0ad3b0eb65">
+          <AttributeID>Khoakv</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4b5d7dbf-9554-46be-8342-7e9e147ec10e">
+          <AttributeID>Makh</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="079c75fb-9c97-4920-9f79-882ccc67a783">
+          <AttributeID>Tenkh</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fd85f999-dd5d-4671-9d79-ca4ddf484a03">
+          <AttributeID>Gioitinh</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="08f08877-9950-41cb-928b-76917d383e4b">
+          <AttributeID>Luatuoi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e0359231-478d-4177-a9ea-b6304488edd5">
+          <AttributeID>Tentpho</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8cacee66-d573-4f64-80e6-9db036078659">
+          <AttributeID>Tenmien</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3488873e-9304-4980-aae2-86ae9ddbbed8">
+          <AttributeID>Tenqgia</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eefb426c-5b6c-4d54-93f2-08b3a54439cc">
+          <AttributeID>Mavung</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="9dec1b09-a7bc-4701-ae1f-b62ef67b5dda">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="f610ab51-ecd9-464e-b61a-23214bbded58">
+      <ID>Ngaygh</ID>
+      <Name>Ngaygh</Name>
+      <DimensionID>THOI GIAN</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4c685864-8b86-49b9-b31c-a34d1749ac56">
+          <AttributeID>Khoatg</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3b71bf71-0c9c-4fc1-be88-23e4087a01d8">
+          <AttributeID>Ngay</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="16f7fc05-8f17-404b-8369-b37190c4ccb2">
+          <AttributeID>Thang</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d8446408-22f0-4ad2-8e2a-8c9080d3539c">
+          <AttributeID>Quy</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="de04140f-2a4f-433d-b264-22840d86cbdb">
+          <AttributeID>Nam</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="2a541653-5a2a-4cff-aa2a-0bc59a630203">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="2c35bf45-ae36-4f9e-bc45-bc1ab968e0f2">
+      <ID>CUA HANG</ID>
+      <Name>CUA HANG</Name>
+      <DimensionID>CUA HANG</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f4b2de11-ae7b-4f5a-b35c-e26e4b29c894">
+          <AttributeID>Khoach</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="460e2762-b9ab-4b54-8fc2-5bcefdec9575">
+          <AttributeID>Khoakv</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="65973e37-a356-43be-bd5b-8eb60a48a691">
+          <AttributeID>Mach</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="49aff714-8b08-43af-994c-f3947e507528">
+          <AttributeID>Tench</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5e464502-1da8-4ab6-aa49-15638823e0cb">
+          <AttributeID>Tentpho</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a271920e-d000-4146-b6c1-06c071839c86">
+          <AttributeID>Tenmien</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="13f65767-f602-4706-bfb9-267c9d5e4927">
+          <AttributeID>Tenqgia</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1e92e292-f800-42a9-a9f6-0d55fc57a9a5">
+          <AttributeID>Mavung</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="f610c148-3603-4b8a-8c25-169673c08793">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="2c6fd8fa-6c75-4c47-b360-5cffaec5c0f0">
+      <ID>HANG HOA</ID>
+      <Name>HANG HOA</Name>
+      <DimensionID>HANG HOA</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c1897dcf-c36e-49ff-a54e-10dab8824b03">
+          <AttributeID>Khoahh</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3f6b1bd9-1a0e-4c43-9e59-acdf6f5d4240">
+          <AttributeID>Mahh</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fae07da1-ea99-4ef2-8798-dc231537412a">
+          <AttributeID>Tenhh</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e2e76425-7ea8-478e-9302-763415c92f42">
+          <AttributeID>Loaihh</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="f63de964-fd13-42a9-a524-4030d9fa8d3c">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="9af52a0f-fb6c-4e2e-b2db-de5694d416c5">
+      <ID>Ngayhd</ID>
+      <Name>Ngayhd</Name>
+      <DimensionID>THOI GIAN</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c2363d9e-959b-4921-b823-4edc373f1732">
+          <AttributeID>Khoatg</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="36ef9c9b-412f-43ad-a96c-7d1c97ceda5c">
+          <AttributeID>Ngay</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7bd41c2f-122a-4ba3-a313-f224accc6227">
+          <AttributeID>Thang</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="01807976-f77b-4f11-bcfa-4c6845334e58">
+          <AttributeID>Quy</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6368172b-ed25-4580-bb2c-76ee6b779265">
+          <AttributeID>Nam</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="55ba1ff4-4010-48df-ab9f-4900ed039489">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="de49bfa6-6fc0-47fb-9140-1a8b6bf55b8e">
+      <ID>HOA DON</ID>
+      <Name>HOA DON</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="daec4a9d-652d-49e1-9c5a-3e016b4cf77d">
+          <ID>Soluong</ID>
+          <Name>Soluong</Name>
+          <Source dwd:design-time-name="cdee912e-fa27-476c-83ed-51b457227c1e">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ee463f77-82b1-4250-882f-a7097f9e33c6">
+              <TableID>dbo_HOA_DON</TableID>
+              <ColumnID>soluong</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="dcd8c0c6-ac83-480a-bb23-d4b346f01d15">
+          <ID>Dongia</ID>
+          <Name>Dongia</Name>
+          <Source dwd:design-time-name="3d11661e-ab64-4197-9820-5158f04aa992">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8ad06e20-f9a0-4196-8f97-7f4d944bd462">
+              <TableID>dbo_HOA_DON</TableID>
+              <ColumnID>dongia</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="35d1e9ce-f6cc-4301-b0f8-c045226339c6">
+          <ID>Thanhtien</ID>
+          <Name>Thanhtien</Name>
+          <Source dwd:design-time-name="853628a4-d314-4f26-9c92-866d66112475">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="217f8bdf-483b-4add-9734-e3fd28accc2c">
+              <TableID>dbo_HOA_DON</TableID>
+              <ColumnID>thanhtien</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="28a78d3b-672d-423a-bac5-d38dbad727f7">
+          <ID>HOA DON Count</ID>
+          <Name>HOA DON Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="141d1bab-b57a-4b49-b979-581cb3abb0f5">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="bae6dc5e-a212-4b5b-82a3-9fe7e3fd207a">
+              <TableID>dbo_HOA_DON</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c57cde52-e0d9-4a97-a5c1-30d5cad8de21">
+          <CubeDimensionID>KHACH HANG</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="53e0ee41-fd85-40a2-ae7c-d4815ab9822f">
+              <AttributeID>Khoakh</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="14ef3ffe-b40d-4eae-aa25-6e03866fc694">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7eced421-42d6-4d2e-97b9-3b0fe05115f3">
+                    <TableID>dbo_HOA_DON</TableID>
+                    <ColumnID>khoakh</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="521b87d8-1943-43be-8cf7-176f2dad49fc">
+          <CubeDimensionID>Ngaygh</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ecfb1415-f558-4f0d-a597-2fcca97a52c0">
+              <AttributeID>Khoatg</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5b058110-285f-4ef5-a83d-e3ac7a04bc2b">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="004e9740-edd3-45da-abd3-046ebdecded2">
+                    <TableID>dbo_HOA_DON</TableID>
+                    <ColumnID>ngaygh</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7dce686a-c897-41bf-8c30-38234506b19e">
+          <CubeDimensionID>CUA HANG</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2df256ea-88d4-4463-ae51-284474dc4b78">
+              <AttributeID>Khoach</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6567ac72-8f5f-4007-933a-71b112d82f19">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5a95e2d6-f389-42fd-afd9-e70deb26755f">
+                    <TableID>dbo_HOA_DON</TableID>
+                    <ColumnID>khoach</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1b4f279f-e148-41a7-94ed-9bb88fe82b5f">
+          <CubeDimensionID>HANG HOA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f585c063-df97-49a6-898e-6e521893aabc">
+              <AttributeID>Khoahh</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3baa8651-ef74-41b4-a41e-4c3b36326710">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="726892a8-598b-4b59-8cac-0c7c6c4936b0">
+                    <TableID>dbo_HOA_DON</TableID>
+                    <ColumnID>khoahh</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6f651a27-70d6-40b8-9532-3f662377b382">
+          <CubeDimensionID>Ngayhd</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="34aa377f-76a8-4d2b-bbdd-6c5d4e39d523">
+              <AttributeID>Khoatg</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="944072e1-f97b-4c12-a7b0-ee977eb34c80">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="daa9e1a3-45e5-48fe-b217-5dc1605fb0b9">
+                    <TableID>dbo_HOA_DON</TableID>
+                    <ColumnID>ngayhd</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="ef8208e3-363c-4f30-a2f0-f97e520e00b9">
+    <DataSourceViewID>KDHH DW</DataSourceViewID>
+  </Source>
+</Cube>

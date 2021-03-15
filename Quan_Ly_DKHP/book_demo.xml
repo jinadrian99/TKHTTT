@@ -2,7 +2,7 @@
 <openerp>
 	<data noupdate="1">
 		<!--Books-->
-		<record id="book_01" model="hp.hp">
+		<record id="action_book_tree" model="hp.hp">
 			<field name="hocphan">NMLT</field>
 			<field name="sotinchi">3</field>
 			<field name="hptienquyet">0</field>

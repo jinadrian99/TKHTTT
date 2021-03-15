@@ -1,0 +1,261 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1e1ffd8a-22d1-4ae6-b824-3d49989738c5" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>KDHH DW</ID>
+  <Name>KDHH DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>KDHH DW</DataSourceID>
+  <Schema>
+    <xs:schema id="KDHH_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="KDHH_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="86648b37-f182-4a8d-bf3b-0b9a5853b09f">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_CUA_HANG" msprop:design-time-name="a5709b63-dec5-4edc-9674-e36e7bbe3515" msprop:DbTableName="CUA_HANG" msprop:FriendlyName="CUA_HANG" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="khoach" msprop:design-time-name="5b251e31-5386-4a17-99e9-509536c7715b" msprop:DbColumnName="khoach" msprop:FriendlyName="khoach" type="xs:decimal" />
+                  <xs:element name="mach" msprop:design-time-name="cddbf3f8-3044-49dc-b990-39536d5553de" msprop:DbColumnName="mach" msprop:FriendlyName="mach" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="tench" msprop:design-time-name="b6cb58c5-86a2-4af7-aa60-8da54fd68939" msprop:DbColumnName="tench" msprop:FriendlyName="tench" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="khoakv" msprop:design-time-name="a6db6f98-7504-4946-a1d6-5d22738e2c2a" msprop:DbColumnName="khoakv" msprop:FriendlyName="khoakv" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_HANG_HOA" msprop:design-time-name="c5c49861-e932-49bb-a4c4-b2ceac6f9950" msprop:DbTableName="HANG_HOA" msprop:FriendlyName="HANG_HOA" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="khoahh" msprop:design-time-name="281fb7d7-8d3f-40b9-9485-c0f16179930c" msprop:DbColumnName="khoahh" msprop:FriendlyName="khoahh" type="xs:decimal" />
+                  <xs:element name="mahh" msprop:design-time-name="153f817c-b3e9-467c-8eab-222c884603f2" msprop:DbColumnName="mahh" msprop:FriendlyName="mahh" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="13" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="tenhh" msprop:design-time-name="9b7afc9d-563d-4c34-ae60-eaccff429a09" msprop:DbColumnName="tenhh" msprop:FriendlyName="tenhh" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="loaihh" msprop:design-time-name="6a1ee728-27f8-4bd4-90c6-2d8755592858" msprop:DbColumnName="loaihh" msprop:FriendlyName="loaihh" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_HOA_DON" msprop:design-time-name="d5bd9e6f-449d-43c8-a2c6-abb475e80e97" msprop:DbTableName="HOA_DON" msprop:FriendlyName="HOA_DON" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="sohd" msprop:design-time-name="ee04cf78-20b4-4095-95ac-7b1ee45da874" msprop:DbColumnName="sohd" msprop:FriendlyName="sohd">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="khoach" msprop:design-time-name="568f0dd0-7a4b-43de-bc2d-6a549af4ea88" msprop:DbColumnName="khoach" msprop:FriendlyName="khoach" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="khoakh" msprop:design-time-name="bebc3293-ab1f-4b2f-a4af-b98938dc2b14" msprop:DbColumnName="khoakh" msprop:FriendlyName="khoakh" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ngayhd" msprop:design-time-name="4e0cb1fa-2025-40dd-903a-aa77c77559c7" msprop:DbColumnName="ngayhd" msprop:FriendlyName="ngayhd" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ngaygh" msprop:design-time-name="faf50a49-68c4-453b-a73e-4271781573dc" msprop:DbColumnName="ngaygh" msprop:FriendlyName="ngaygh" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="cthd" msprop:design-time-name="0175c569-31f2-4362-9a23-b4d5d5f09738" msprop:DbColumnName="cthd" msprop:FriendlyName="cthd" type="xs:decimal" />
+                  <xs:element name="khoahh" msprop:design-time-name="d6892a3c-1bf0-40b5-aef8-b82dfb3cd8b5" msprop:DbColumnName="khoahh" msprop:FriendlyName="khoahh" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="soluong" msprop:design-time-name="5c1a71d1-ebb4-44de-ac0f-bad22869f890" msprop:DbColumnName="soluong" msprop:FriendlyName="soluong" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="dongia" msprop:design-time-name="3e3d1753-9dc6-4c24-95c4-dc5fb35c2e77" msprop:DbColumnName="dongia" msprop:FriendlyName="dongia" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="thanhtien" msdata:ReadOnly="true" msprop:design-time-name="6774609c-2d96-4ded-a3f8-dbcef66dde40" msprop:DbColumnName="thanhtien" msprop:FriendlyName="thanhtien" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_KHACH_HANG" msprop:design-time-name="1ad6b942-671a-476d-8e2a-4bec3d94a5ff" msprop:DbTableName="KHACH_HANG" msprop:FriendlyName="KHACH_HANG" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="khoakh" msprop:design-time-name="be4bdd90-a8ff-464c-b64a-4a6250acfde7" msprop:DbColumnName="khoakh" msprop:FriendlyName="khoakh" type="xs:decimal" />
+                  <xs:element name="makh" msprop:design-time-name="d7f2d0f0-2773-4f8e-b782-8b7f8db7cc1f" msprop:DbColumnName="makh" msprop:FriendlyName="makh" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="tenkh" msprop:design-time-name="250a9492-4c72-4adc-94a1-99a66b60b185" msprop:DbColumnName="tenkh" msprop:FriendlyName="tenkh" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="gioitinh" msprop:design-time-name="f7f3b909-8028-4449-b6ac-19034e9f64df" msprop:DbColumnName="gioitinh" msprop:FriendlyName="gioitinh" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="luatuoi" msprop:design-time-name="dd5e643b-51c3-48c3-96e9-a10a08990877" msprop:DbColumnName="luatuoi" msprop:FriendlyName="luatuoi" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="khoakv" msprop:design-time-name="641ed5d2-0db6-4313-9dd7-ded9d27cdbdf" msprop:DbColumnName="khoakv" msprop:FriendlyName="khoakv" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_KHU_VUC" msprop:design-time-name="da5834b2-e7db-4c5b-8478-d6943d3cf6b7" msprop:DbTableName="KHU_VUC" msprop:FriendlyName="KHU_VUC" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="khoakv" msprop:design-time-name="1a74c3e7-0c46-4b56-b6ca-0a59f736a3c4" msprop:DbColumnName="khoakv" msprop:FriendlyName="khoakv" type="xs:decimal" />
+                  <xs:element name="tentpho" msprop:design-time-name="2f374e00-72d1-4305-b8be-33ba5a7922aa" msprop:DbColumnName="tentpho" msprop:FriendlyName="tentpho" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="tenmien" msprop:design-time-name="221814f4-6cb4-4584-9202-bb5d30d51e1f" msprop:DbColumnName="tenmien" msprop:FriendlyName="tenmien" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="tenqgia" msprop:design-time-name="4bd101db-1d76-4a7b-9b68-a95af1e305ec" msprop:DbColumnName="tenqgia" msprop:FriendlyName="tenqgia" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="mavung" msprop:design-time-name="35b0c64e-4bd5-436a-9f1e-7826c4f2e8b2" msprop:DbColumnName="mavung" msprop:FriendlyName="mavung" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_THOI_GIAN" msprop:design-time-name="3af758ff-0726-42b9-a775-a368135f7161" msprop:DbTableName="THOI_GIAN" msprop:FriendlyName="THOI_GIAN" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="khoatg" msprop:design-time-name="8f677027-b479-4e8e-a58c-661fb68368ee" msprop:DbColumnName="khoatg" msprop:FriendlyName="khoatg" type="xs:decimal" />
+                  <xs:element name="ngay" msprop:design-time-name="4588d0c5-a71b-493c-a38c-b426daeb3433" msprop:DbColumnName="ngay" msprop:FriendlyName="ngay" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="thang" msprop:design-time-name="535e88ae-07f7-45be-a75a-2827bdf273d2" msprop:DbColumnName="thang" msprop:FriendlyName="thang" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="quy" msprop:design-time-name="07f5e7eb-5313-49b7-9b4e-24b835dbb837" msprop:DbColumnName="quy" msprop:FriendlyName="quy" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="nam" msprop:design-time-name="e1926d20-a88a-488f-920c-5775f9b04172" msprop:DbColumnName="nam" msprop:FriendlyName="nam" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_CUA_HANG" />
+          <xs:field xpath="khoach" />
+        </xs:unique>
+        <xs:unique name="dbo_HANG_HOA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_HANG_HOA" />
+          <xs:field xpath="khoahh" />
+        </xs:unique>
+        <xs:unique name="dbo_HOA_DON_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_HOA_DON" />
+          <xs:field xpath="sohd" />
+          <xs:field xpath="cthd" />
+        </xs:unique>
+        <xs:unique name="dbo_KHACH_HANG_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_KHACH_HANG" />
+          <xs:field xpath="khoakh" />
+        </xs:unique>
+        <xs:unique name="dbo_KHU_VUC_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_KHU_VUC" />
+          <xs:field xpath="khoakv" />
+        </xs:unique>
+        <xs:unique name="dbo_THOI_GIAN_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_THOI_GIAN" />
+          <xs:field xpath="khoatg" />
+        </xs:unique>
+        <xs:keyref name="FK__KHACH_HAN__khoak__38996AB5" refer="dbo_KHU_VUC_Constraint1">
+          <xs:selector xpath=".//dbo_KHACH_HANG" />
+          <xs:field xpath="khoakv" />
+        </xs:keyref>
+        <xs:keyref name="FK__HOA_DON__ngayhd__440B1D61" refer="dbo_THOI_GIAN_Constraint1">
+          <xs:selector xpath=".//dbo_HOA_DON" />
+          <xs:field xpath="ngayhd" />
+        </xs:keyref>
+        <xs:keyref name="FK__HOA_DON__khoahh__45F365D3" refer="dbo_HANG_HOA_Constraint1">
+          <xs:selector xpath=".//dbo_HOA_DON" />
+          <xs:field xpath="khoahh" />
+        </xs:keyref>
+        <xs:keyref name="FK__HOA_DON__khoach__4222D4EF" refer="Constraint1">
+          <xs:selector xpath=".//dbo_HOA_DON" />
+          <xs:field xpath="khoach" />
+        </xs:keyref>
+        <xs:keyref name="FK__HOA_DON__ngaygh__44FF419A" refer="dbo_THOI_GIAN_Constraint1">
+          <xs:selector xpath=".//dbo_HOA_DON" />
+          <xs:field xpath="ngaygh" />
+        </xs:keyref>
+        <xs:keyref name="FK__HOA_DON__khoakh__4316F928" refer="dbo_KHACH_HANG_Constraint1">
+          <xs:selector xpath=".//dbo_HOA_DON" />
+          <xs:field xpath="khoakh" />
+        </xs:keyref>
+        <xs:keyref name="FK__CUA_HANG__khoakv__3B75D760" refer="dbo_KHU_VUC_Constraint1">
+          <xs:selector xpath=".//dbo_CUA_HANG" />
+          <xs:field xpath="khoakv" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <KDHH_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!--Books-->
+		<record id="book_01" model="hp.hp">
+			<field name="hocphan">NMLT</field>
+			<field name="sotinchi">3</field>
+			<field name="hptienquyet">0</field>
+			<field name="tbl_hptq"></field>
+		</record>
+		<record id="book_02" model="hp.hp">
+			<field name="hocphan">CTDL</field>
+			<field name="sotinchi">4</field>
+			<field name="hptienquyet">0</field>
+			<field name="tbl_hptq"></field>
+		</record>
+
+        <!--Books-->
+		<record id="class_01" model="lhp.lhp">
+			<field name="malhp">VeCV</field>
+			<field name="tenhp">VeCV</field>
+			<field name="giangvien">kw</field>
+			<field name="ngaybatdau">1999-01-18</field>
+			<field name="ngayketthuc">1999-01-18</field>
+			<field name="ghichu">Bậc thầy hội họa</field>
+		</record>
+		<record id="class_02" model="lhp.lhp">
+			<field name="malhp">KTLT</field>
+			<field name="tenhp">KTLT</field>
+			<field name="giangvien">h</field>
+			<field name="ngaybatdau">1999-11-23</field>
+			<field name="ngayketthuc">1999-11-23</field>
+			<field name="ghichu">Không gì là ko thể nếu ko cố gắng</field>
+		</record>
+	</data>
+</openerp>

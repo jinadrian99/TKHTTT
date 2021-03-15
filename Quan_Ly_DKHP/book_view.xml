@@ -21,7 +21,7 @@
 			<field name="arch" type="xml">
 				<tree string="List of books">
 					<field name="hocphan"/>
-					<field name="sotinchi"/>
+					<field name="sotinchi" />
 					<field name="hptienquyet"/>
 				</tree>
 			</field>
